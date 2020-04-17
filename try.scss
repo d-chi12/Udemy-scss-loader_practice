@@ -86,25 +86,30 @@
         $duration: 1.2s,
         $timing-function: ease-in-out,
         $iteration-count: infinite,
-        $direction: normal,
-        $fill-mode: forwards,
       );
+      
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: -1.2s + $i * 0.1s;
+        }
+      }
 
-      &:nth-child(1) {
-        animation-delay: -1.2s;
-      }
-      &:nth-child(2) {
-        animation-delay: -1.1s;
-      }
-      &:nth-child(3) {
-        animation-delay: -1s;
-      }
-      &:nth-child(4) {
-        animation-delay: -0.9s;
-      }
-      &:nth-child(5) {
-        animation-delay: -0.8s;
-      }
+
+      // &:nth-child(1) {
+      //   animation-delay: -1.2s;
+      // }
+      // &:nth-child(2) {
+      //   animation-delay: -1.1s;
+      // }
+      // &:nth-child(3) {
+      //   animation-delay: -1s;
+      // }
+      // &:nth-child(4) {
+      //   animation-delay: -0.9s;
+      // }
+      // &:nth-child(5) {
+      //   animation-delay: -0.8s;
+      // }
     }
   }
 
